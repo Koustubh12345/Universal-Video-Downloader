@@ -8,6 +8,9 @@ Universal Video &amp; Music Downloader - Fast, and cross-platform tool for Andro
 - Choose specific formats
 - Auto-organized downloads
 
+## • Note
+YouTube should be login in your device or in browser 
+
 ## 📦 Installation
 ```bash
 pkg update
