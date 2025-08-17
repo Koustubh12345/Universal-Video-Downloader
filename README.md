@@ -10,6 +10,8 @@ Universal Video &amp; Music Downloader - Fast, and cross-platform tool for Andro
 
 ## 📦 Installation
 ```bash
+pkg update
+pkg install python
 git clone https://github.com/Koustubh12345/Universal-Video-Downloader.git
 cd Universal-Video-Downloader
 pip install -r requirements.txt
@@ -19,16 +21,12 @@ pip install -r requirements.txt
 ```bash
 pkg update
 
-pkg install python ffmpeg
-
 bash start.sh
 ```
 
 ### For Linux (Ubuntu/Debian)
 ```bash
 sudo apt-get update
-
-sudo apt-get install python3 ffmpeg
 
 bash start.sh
 ```
@@ -43,8 +41,6 @@ python -m uvd.uvd
 ### For macOS
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-brew install python ffmpeg
 
 bash start.sh
 ```
