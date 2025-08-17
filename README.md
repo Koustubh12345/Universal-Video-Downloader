@@ -13,9 +13,9 @@ git clone https://github.com/Koustubh12345/Universal-Video-Downloader-.git
 cd Universal-Video-Downloader-
 pip install -r requirements.txt
 
-## Platform-Specific Instructions
+# Platform-Specific Instructions
 
-### For Termux (Android)
+## For Termux (Android)
 ```bash
 # Update package lists
 pkg update
