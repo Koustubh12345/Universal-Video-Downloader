@@ -9,7 +9,7 @@ Universal Video &amp; Music Downloader - Fast, and cross-platform tool for Andro
 - Auto-organized downloads
 
 ## • Note
-YouTube should be login in your device or in browser 
+- You must be logged into YouTube on your device or browser. Without an account, yt-dlp will require cookies.
 
 ## 📦 Installation
 ```bash
