@@ -11,7 +11,7 @@ def list_formats(info):
     valid = []
     from .utils import format_size
     for f in formats:
-        if f.get("vcodec") != "none":
+        if f.get("vcodec") != "none" and f.get("acodec") != "none":
             h = f.get("height", "?")
             fps = f.get("fps", "?")
             size = format_size(f.get("filesize") or f.get("filesize_approx"))
@@ -43,7 +43,7 @@ def download_from_url(url, mode="video"):
         'no_warnings': True,
         'noprogress': True
     }
-
+    
     try:
         with YoutubeDL(base_opts) as ydl:
             info = ydl.extract_info(url, download=False)
@@ -58,6 +58,14 @@ def download_from_url(url, mode="video"):
                     return
                 choice = input("\n🎯 Enter audio format ID (or Enter for best audio): ").strip()
                 base_opts['format'] = choice if choice and choice in formats else "bestaudio"
+                # Add MP3 postprocessor
+                base_opts['postprocessors'] = [{
+                    'key': 'FFmpegExtractAudio',
+                    'preferredcodec': 'mp3',
+                    'preferredquality': '192',
+                }]
+                base_opts['extractaudio'] = True
+                base_opts['audioformat'] = 'mp3'
             else:
                 formats = list_formats(info)
                 if not formats:
@@ -68,6 +76,11 @@ def download_from_url(url, mode="video"):
                 
         with YoutubeDL(base_opts) as ydl:
             ydl.download([url])
+            
+        # Show save location
+        output_ext = 'mp3' if mode == "audio" else info['ext']
+        output_path = os.path.join(OUTPUT_DIR, f"{info['title']}.{output_ext}")
+        print_colored(f"\n✅ Download completed! Saved at: {output_path}", 'OKGREEN')
             
     except Exception as e:
         print_colored(f"\nError: {e}", 'FAIL')
