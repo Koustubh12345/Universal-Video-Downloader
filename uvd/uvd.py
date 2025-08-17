@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from .utils import print_colored
 from .downloader import download_from_url
+
 def display_banner():
     banner = r"""
  _____                   _                     _
@@ -11,6 +12,7 @@ def display_banner():
     """
     print_colored(banner, 'HEADER')
     print_colored("Universal Video Downloader v4.1", 'OKCYAN')
+
 def main():
     display_banner()
     while True:
@@ -37,5 +39,6 @@ def main():
             break
         else:
             print_colored("Invalid choice.", 'FAIL')
+
 if __name__ == "__main__":
     main()
