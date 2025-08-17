@@ -5,7 +5,7 @@ Universal Video &amp; Music Downloader - Fast, and cross-platform tool for Andro
 ## • Features
 - Supports multiple platforms (YouTube, Facebook, Instagram, Twitter/X)
 - Fancy terminal progress bar
-- Choose specific formats (video/audio)
+- Choose specific formats
 - Auto-organized downloads
 
 ## 📦 Installation
