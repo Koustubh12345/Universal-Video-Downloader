@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 # Platform-Specific Instructions
 
-## For Termux (Android)
+### For Termux (Android)
 ```bash
 # Update package lists
 pkg update
