@@ -51,3 +51,6 @@ bash start.sh
 ---
 
 The downloader supports high-speed downloads (up to 100 MB/s) and provides detailed progress information during downloads.
+
+#Credits
+-@mr_9knight (For banner)
