@@ -1,4 +1,4 @@
-![Tensei](uvd/Tensei.jpg)
+![Tensei](uvd/Tensei.png)
 # Universal-Video-Downloader
 Universal Video &amp; Music Downloader - Fast, and cross-platform tool for Android (Termux), Linux &amp; Windows. Supports HD video, music downloads, quality selection, and built-in converter.
 
